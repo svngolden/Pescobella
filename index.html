@@ -1,0 +1,69 @@
+<!doctype html>
+<html lang="ro">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Pescobar – Meniu QR</title>
+    <meta name="description" content="Meniu QR – băuturi și mâncare" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800&family=Noto+Sans:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main class="page">
+      <section class="shell">
+        <header class="hero">
+          <div class="lang" role="group" aria-label="Language">
+            <button class="lang__btn" type="button" data-lang="ro" aria-pressed="true">
+              <span class="flag" aria-hidden="true">🇷🇴</span>
+              <span>RO</span>
+            </button>
+            <button class="lang__btn" type="button" data-lang="en" aria-pressed="false">
+              <span class="flag" aria-hidden="true">🇬🇧</span>
+              <span>EN</span>
+            </button>
+          </div>
+
+          <div class="hero__media" aria-label="Hero image">
+            <div class="hero__img" role="img" aria-label="Seafood hero image"></div>
+            <div class="hero__logo" aria-label="Logo">
+              <div class="logoMark">
+                <div class="logoMark__inner">
+                  <div class="logoMark__icon" aria-hidden="true"></div>
+                  <div class="logoMark__text">Pescobar</div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <nav class="tabs" aria-label="Menu sections">
+            <button class="tab" type="button" data-tab="drinks" aria-selected="true">
+              <span data-i18n="tab.drinks">Băuturi</span>
+            </button>
+            <button class="tab" type="button" data-tab="food" aria-selected="false">
+              <span data-i18n="tab.food">Mâncare</span>
+            </button>
+            <div class="tabs__underline" aria-hidden="true"></div>
+          </nav>
+        </header>
+
+        <section class="content" aria-live="polite">
+          <h2 class="srOnly" data-i18n="title">Meniu</h2>
+
+          <div class="grid" id="categoryGrid" aria-label="Categories"></div>
+        </section>
+
+        <footer class="foot">
+          <div class="foot__row">
+            <div class="foot__brand">Pescobar</div>
+            <div class="foot__meta" data-i18n="foot.meta">* Pozele sunt orientative. Prețurile pot varia.</div>
+          </div>
+        </footer>
+      </section>
+    </main>
+
+    <script src="menu-data.js"></script>
+    <script src="app.js"></script>
+  </body>
+</html>
